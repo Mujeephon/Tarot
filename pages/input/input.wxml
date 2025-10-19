@@ -1,8 +1,5 @@
 <!--input.wxml-->
 <view class="container">
-  <!-- 星星背景层 -->
-  <view class="stars-background"></view>
-  
   <view class="header">
     <text class="title">塔罗占卜</text>
     <text class="subtitle">请填写您的信息</text>

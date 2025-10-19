@@ -3,38 +3,6 @@
   padding: 30rpx;
   background-color: #f8f6f9;
   min-height: 100vh;
-  position: relative;
-  overflow: hidden;
-}
-
-/* 星星背景层 */
-.stars-background {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 1;
-  pointer-events: none;
-}
-
-.stars-background::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-image: 
-    radial-gradient(circle at 20% 20%, #ffeb3b 0%, #ffeb3b 0.2%, transparent 0.8%),
-    radial-gradient(circle at 40% 70%, #ffeb3b 0%, #ffeb3b 0.2%, transparent 0.7%),
-    radial-gradient(circle at 60% 30%, #ffeb3b 0%, #ffeb3b 0.2%, transparent 0.9%),
-    radial-gradient(circle at 80% 50%, #ffeb3b 0%, #ffeb3b 0.2%, transparent 0.8%),
-    radial-gradient(circle at 10% 60%, #ffeb3b 0%, #ffeb3b 0.2%, transparent 0.7%),
-    radial-gradient(circle at 30% 90%, #ffeb3b 0%, #ffeb3b 0.2%, transparent 0.8%),
-    radial-gradient(circle at 70% 85%, #ffeb3b 0%, #ffeb3b 0.2%, transparent 0.7%),
-    radial-gradient(circle at 90% 10%, #ffeb3b 0%, #ffeb3b 0.2%, transparent 0.8%),
-    radial-gradient(circle at 50% 40%, #ffeb3b 0%, #ffeb3b 0.2%, transparent 0.7%);
 }
 
 .header {
