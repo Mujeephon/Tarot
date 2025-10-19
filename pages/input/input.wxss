@@ -3,6 +3,38 @@
   padding: 30rpx;
   background-color: #f8f6f9;
   min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+/* 星星背景层 */
+.stars-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.stars-background::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 20% 20%, #ffeb3b 0%, #ffeb3b 0.2%, transparent 0.8%),
+    radial-gradient(circle at 40% 70%, #ffeb3b 0%, #ffeb3b 0.2%, transparent 0.7%),
+    radial-gradient(circle at 60% 30%, #ffeb3b 0%, #ffeb3b 0.2%, transparent 0.9%),
+    radial-gradient(circle at 80% 50%, #ffeb3b 0%, #ffeb3b 0.2%, transparent 0.8%),
+    radial-gradient(circle at 10% 60%, #ffeb3b 0%, #ffeb3b 0.2%, transparent 0.7%),
+    radial-gradient(circle at 30% 90%, #ffeb3b 0%, #ffeb3b 0.2%, transparent 0.8%),
+    radial-gradient(circle at 70% 85%, #ffeb3b 0%, #ffeb3b 0.2%, transparent 0.7%),
+    radial-gradient(circle at 90% 10%, #ffeb3b 0%, #ffeb3b 0.2%, transparent 0.8%),
+    radial-gradient(circle at 50% 40%, #ffeb3b 0%, #ffeb3b 0.2%, transparent 0.7%);
 }
 
 .header {
@@ -33,23 +65,27 @@
 }
 
 .form-item {
-  margin-bottom: 30rpx;
+  margin-bottom: 40rpx;
+  padding: 15rpx;
+  background-color: #faf8fc;
+  border-radius: 15rpx;
 }
 
 .label {
   display: block;
-  font-size: 28rpx;
+  font-size: 32rpx;
   color: #333;
-  margin-bottom: 15rpx;
+  margin-bottom: 20rpx;
   font-weight: 500;
 }
 
 .picker {
-  height: 80rpx;
-  line-height: 80rpx;
-  border-bottom: 1rpx solid #e0e0e0;
-  font-size: 30rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  border-bottom: 2rpx solid #e0e0e0;
+  font-size: 34rpx;
   color: #333;
+  padding: 0 20rpx;
 }
 
 .placeholder {
@@ -57,18 +93,19 @@
 }
 
 .input {
-  height: 80rpx;
-  border-bottom: 1rpx solid #e0e0e0;
-  font-size: 30rpx;
+  height: 100rpx;
+  border-bottom: 2rpx solid #e0e0e0;
+  font-size: 34rpx;
+  padding: 0 20rpx;
 }
 
 .textarea {
   width: 100%;
-  height: 200rpx;
-  border: 1rpx solid #e0e0e0;
-  border-radius: 10rpx;
-  padding: 20rpx;
-  font-size: 30rpx;
+  height: 240rpx;
+  border: 2rpx solid #e0e0e0;
+  border-radius: 15rpx;
+  padding: 25rpx;
+  font-size: 34rpx;
   box-sizing: border-box;
 }
 
