@@ -1,0 +1,36 @@
+<!--result.wxml-->
+<view class="container">
+  <view class="header">
+    <text class="title">塔罗占卜结果</text>
+  </view>
+
+  <!-- 加载中状态 -->
+  <view class="loading-container" wx:if="{{loading}}">
+    <view class="loading"></view>
+    <text class="loading-text">正在解读塔罗牌...</text>
+  </view>
+
+  <!-- 结果展示 -->
+  <view class="result-container" wx:else>
+    <!-- 塔罗牌展示区 - 放在上方 -->
+    <view class="cards-container">
+      <view class="card-item" wx:for="{{cards}}" wx:key="index">
+        <image class="card-image" src="{{item.image}}" mode="aspectFit" binderror="handleImageError" data-index="{{index}}"></image>
+        <text class="card-position">{{index === 0 ? '过去' : (index === 1 ? '现在' : '未来')}}</text>
+        <text class="card-name" wx:if="{{item.name !== '过去' && item.name !== '现在' && item.name !== '未来'}}">{{item.name}}</text>
+      </view>
+    </view>
+
+    <!-- 解读内容 - 放在下方 -->
+    <view class="interpretation-container">
+      <text class="interpretation-title">塔罗牌解读</text>
+      <text class="interpretation-text">{{interpretation}}</text>
+    </view>
+
+    <!-- 操作按钮 -->
+    <view class="action-buttons">
+      <button class="action-btn back-btn" bindtap="goBack">返回</button>
+      <button class="action-btn share-btn" bindtap="shareResult" open-type="share">分享结果</button>
+    </view>
+  </view>
+</view>

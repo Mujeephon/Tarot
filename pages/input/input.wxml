@@ -1,0 +1,39 @@
+<!--input.wxml-->
+<view class="container">
+  <view class="header">
+    <text class="title">塔罗占卜</text>
+    <text class="subtitle">请填写您的信息</text>
+  </view>
+
+  <view class="form-group">
+    <view class="form-item">
+      <text class="label">生日</text>
+      <picker mode="date" value="{{birthday}}" start="1900-01-01" end="{{today}}" bindchange="bindBirthdayChange">
+        <view class="picker {{birthday ? '' : 'placeholder'}}">
+          {{birthday || '请选择您的生日'}}
+        </view>
+      </picker>
+    </view>
+
+    <view class="form-item">
+      <text class="label">性别</text>
+      <picker bindchange="bindGenderChange" value="{{genderIndex}}" range="{{gender}}">
+        <view class="picker">
+          {{gender[genderIndex]}}
+        </view>
+      </picker>
+    </view>
+
+    <view class="form-item">
+      <text class="label">出生城市</text>
+      <input class="input" placeholder="请输入您的出生城市" value="{{city}}" bindinput="bindCityInput" />
+    </view>
+
+    <view class="form-item">
+      <text class="label">占卜问题</text>
+      <textarea class="textarea" placeholder="请输入您想要占卜的问题" value="{{question}}" bindinput="bindQuestionInput" maxlength="200"></textarea>
+    </view>
+  </view>
+
+  <button class="submit-btn" bindtap="submitForm">开始占卜</button>
+</view>

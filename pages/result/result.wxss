@@ -1,0 +1,142 @@
+/**result.wxss**/
+.container {
+  padding: 30rpx;
+  background-color: #f8f6f9;
+  min-height: 100vh;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 40rpx;
+}
+
+.title {
+  font-size: 56rpx;
+  font-weight: bold;
+  color: #6a3093;
+  margin-bottom: 10rpx;
+  text-shadow: 0 2rpx 4rpx rgba(0, 0, 0, 0.1);
+}
+
+/* 加载中样式 */
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 500rpx;
+}
+
+.loading {
+  width: 80rpx;
+  height: 80rpx;
+  border: 8rpx solid #f3f3f3;
+  border-top: 8rpx solid #6a3093;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 30rpx;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading-text {
+  font-size: 32rpx;
+  color: #666;
+}
+
+/* 结果容器样式 */
+.result-container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* 卡片展示区样式 */
+.cards-container {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 40rpx;
+  flex-wrap: wrap;
+}
+
+.card-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+}
+
+.card-image {
+  width: 180rpx;
+  height: 300rpx;
+  border-radius: 10rpx;
+  box-shadow: 0 4rpx 20rpx rgba(0, 0, 0, 0.2);
+  margin-bottom: 15rpx;
+  background-color: #fff;
+}
+
+.card-name {
+  font-size: 28rpx;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5rpx;
+}
+
+.card-position {
+  font-size: 30rpx;
+  color: #666;
+  font-weight: bold;
+}
+
+/* 解读内容样式 */
+.interpretation-container {
+  background-color: #fff;
+  border-radius: 20rpx;
+  padding: 30rpx;
+  box-shadow: 0 4rpx 20rpx rgba(0, 0, 0, 0.1);
+  margin-bottom: 40rpx;
+}
+
+.interpretation-title {
+  font-size: 42rpx;
+  font-weight: bold;
+  color: #6a3093;
+  margin-bottom: 20rpx;
+  display: block;
+  text-shadow: 0 1rpx 3rpx rgba(0, 0, 0, 0.1);
+}
+
+.interpretation-text {
+  font-size: 28rpx;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* 操作按钮样式 */
+.action-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.action-btn {
+  width: 45%;
+  border-radius: 50rpx;
+  font-size: 32rpx;
+  font-weight: bold;
+  padding: 20rpx 0;
+}
+
+.back-btn {
+  background-color: #f0f0f0;
+  color: #666;
+}
+
+.share-btn {
+  background: linear-gradient(135deg, #6a3093 0%, #a044ff 100%);
+  color: white;
+  box-shadow: 0 8rpx 20rpx rgba(106, 48, 147, 0.3);
+}
